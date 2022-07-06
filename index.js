@@ -4,7 +4,8 @@ const fs = require("fs");
 
 const getFileName = (youtubeLink) => {
   if (youtubeLink.match(/^(https:\/\/(www.youtube.com|youtu.be))/)) {
-    const reg = /(https:\/\/(www.youtube.com\/watch\?v=|youtu.be\/))|&.+/g;
+    const reg =
+      /(https:\/\/(www.youtube.com(\/watch\?v=|\/shorts\/)|youtu.be\/))|&.+/g;
     const fileName = youtubeLink.replace(reg, "");
 
     return {
